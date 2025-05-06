@@ -1,198 +1,378 @@
 <!DOCTYPE html><html lang="en"><head>
-<!-- Favicon Setup -->
-<link rel="apple-touch-icon" sizes="57x57" href="favico/apple-touch-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="favico/apple-touch-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="favico/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="favico/apple-touch-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="favico/apple-touch-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="favico/apple-touch-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="favico/apple-touch-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="favico/apple-touch-icon-152x152.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favico/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favico/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="favico/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="128x128" href="favico/favicon-128.png">
-<link rel="icon" type="image/png" sizes="196x196" href="favico/favicon-196x196.png">
-<link rel="shortcut icon" href="favico/favicon-32x32.png" type="image/x-icon">
+    <title>$NUNI </title>
     <meta charset="UTF-8">
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="favico/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="favico/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="favico/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="favico/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="favico/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="favico/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="favico/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="favico/apple-touch-icon-152x152.png">
-    <link rel="icon" type="image/png" href="favico/favicon-196x196.png" sizes="196x196">
-    <link rel="icon" type="image/png" href="favico/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="favico/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="favico/favicon-16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="favico/favicon-128.png" sizes="128x128">
-    <link rel="stylesheet" href="style.css">
+    <meta name="format-detection" content="telephone=no">
+    <style>
+      body {
+        opacity: 0;
+        transition: opacity 0.2s ease 0s;
+      }
+
+      .loaded body {
+        opacity: 1;
+      }
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/title-decor.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="LUNZO - The Cute Green Alien">
-    <meta property="og:description" content="The cutest alien in space make your own LUNZO!">
-    <meta property="og:image" content="gif/landingAnimation.gif">
-    <meta property="og:url" content="https://LUNZOthealien.xyz/">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="LUNZO">
-    <meta name="twitter:card" content="summary_large_image">
-    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest/dist/lenis.min.js" defer="" type="34dc7494e50e2cb7a7aa90f0-text/javascript"></script>
-    <script src="script.js" defer="" type="34dc7494e50e2cb7a7aa90f0-text/javascript"></script>
-    <title>LUNZO</title>
-</head>
+  </head>
 
-<body>
-    <img src="images/playing.png" id="pause">
-    <img src="images/paused.png" id="play">
-    <audio id="beat" loop="">
-        <source src="mp3/lofi-beat.mp3" type="audio/mpeg">
-    </audio>
-    <div id="wake-up-fren">
-        <h1 class="title"><span class="dollar"></span>LUNZO</h1>
-        <button id="wake-up-btn">
-            <img src="images/wakeupBtn.png" class="wake-up-btn-img">
-        </button>
-        <img src="images/01.webp" class="wake-up-img asleep">
-        <img src="images/02.webp" class="wake-up-img awake">
-    </div>
-    <button id="navbar-btn" class="">
-        <span class="navbar-btn-line a"></span>
-        <span class="navbar-btn-line b"></span>
-        <span class="navbar-btn-line c"></span>
-    </button>
-    <nav id="navbar">
-        <div class="navbar-header">
-            <h1 class="title"><span class="dollar"></span>LUNZO</h1>
-            <div class="sub-title">By LUNZO</div>
-        </div>
-        <div class="navbar-ca">
-            <div class="ca-icon-wrapper">
-                <img src="images/ca.png" class="ca-icon">
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <div class="header__container-mini">
+            <a href="https://solanameme.icu/index-2.html" class="header__logo"></a>
+            <div class="header__right">
+              <div class="header__menu menu">
+                <button type="button" class="menu__icon icon-menu">
+                  <span></span>
+                </button>
+                <nav class="menu__body">
+                  <ul class="menu__list">
+                    <li class="menu__item">
+                      <a href="index.html#" data-goto=".hero" class="menu__link">Home</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="index.html#" data-goto-header="" data-goto=".what" class="menu__link">About</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="index.html#" data-goto-header="" data-goto=".how" class="menu__link">How to buy</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="index.html#" data-goto-header="" data-goto=".Nuninomics" class="menu__link">Nuninomics</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="header__buttons" data-da=".menu__body, 991.98">
+                <!-- <a
+                  href="https://jup.ag/swap/CROX-SOL"
+                  class="header__button button">
+                  <img src="img/okx_dex_logo.svg" alt="Logo" />
+                </a> -->
+                <a href="https://pump.fun/B7jQUJNPpT76QMux3oHH2ffamC57XXKhfWbH3j3Rpump" class="header__button button">
+                  <span>BUY NOW</span>
+                </a>
+              </div>
             </div>
-            <!--CAAAAAAAA-->
-            <div class="ca-text">CA: 8ErGuZa88xRwqpqztkj3ZKiwssH9swpbuidNDVZpump</div>
-            <span class="ca-tooltip">COPY ADDRESS</span>
+          </div>
         </div>
-        <img src="images/l.webp" class="side-quak left-quak navbar-quak">
-        <div class="navbar-links">
-            <div class="social-icon-wrapper" onclick="if (!window.__cfRLUnblockHandlers) return false; scrollToGenerator()" data-cf-modified-34dc7494e50e2cb7a7aa90f0-="">
-                <img src="images/pfp-generator/icon/icon.webp" class="social-icon">
+      </header>
+
+      <main class="page">
+        <section data-watch="navigator" class="page__hero hero">
+          <div class="hero__bg">
+            <img src="images/bg_1.png" alt="Background Image">
+          </div>
+          <div class="hero__top top-hero">
+            <div class="top-hero__container">
+              <div class="top-hero__container-mini">
+                <div class="top-hero__content">
+                  <div class="top-hero__lable"></div>
+                  <h1 class="top-hero__title"><span>$NUNI </span></h1>
+                  <div class="top-hero__text">
+                     famously linked to the Nutty Nibbles, humorously stands for "$NUNI" symbolizing the simple yet diligent act of gathering rewards, much like investors collecting gains over time.
+                  </div>
+                  <div class="top-hero__buttons">
+                    <a href="https://pump.fun/B7jQUJNPpT76QMux3oHH2ffamC57XXKhfWbH3j3Rpump" class="top-hero__button button button--big"><span>Buy Now</span><svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
+                        <path d="M9.22876 7.21146C8.30577 7.21146 7.55668 7.96056 7.55668 8.88355V24.2667C7.55668 25.1897 8.30577 25.9388 9.22876 25.9388H24.6119C25.5349 25.9388 26.284 25.1897 26.284 24.2667V19.2505C26.284 18.8957 26.4249 18.5554 26.6758 18.3046C26.9267 18.0537 27.2669 17.9128 27.6217 17.9128C27.9764 17.9128 28.3167 18.0537 28.5675 18.3046C28.8184 18.5554 28.9593 18.8957 28.9593 19.2505V24.2667C28.9593 25.4197 28.5013 26.5255 27.686 27.3408C26.8707 28.1561 25.7649 28.6141 24.6119 28.6141H9.22876C8.07576 28.6141 6.96997 28.1561 6.15468 27.3408C5.33938 26.5255 4.88135 25.4197 4.88135 24.2667V8.88355C4.88135 7.73054 5.33938 6.62476 6.15468 5.80946C6.96997 4.99416 8.07576 4.53613 9.22876 4.53613H14.245C14.5998 4.53613 14.94 4.67707 15.1909 4.92793C15.4417 5.17879 15.5827 5.51903 15.5827 5.8738C15.5827 6.22857 15.4417 6.56881 15.1909 6.81967C14.94 7.07053 14.5998 7.21146 14.245 7.21146H9.22876ZM19.5957 7.21146C19.2409 7.21146 18.9007 7.07053 18.6498 6.81967C18.3989 6.56881 18.258 6.22857 18.258 5.8738C18.258 5.51903 18.3989 5.17879 18.6498 4.92793C18.9007 4.67707 19.2409 4.53613 19.5957 4.53613H27.6217C27.9764 4.53613 28.3167 4.67707 28.5675 4.92793C28.8184 5.17879 28.9593 5.51903 28.9593 5.8738V13.8998C28.9593 14.2546 28.8184 14.5948 28.5675 14.8457C28.3167 15.0965 27.9764 15.2375 27.6217 15.2375C27.2669 15.2375 26.9267 15.0965 26.6758 14.8457C26.4249 14.5948 26.284 14.2546 26.284 13.8998V9.10292L20.5414 14.8455C20.2891 15.0892 19.9512 15.224 19.6005 15.221C19.2498 15.2179 18.9143 15.0772 18.6662 14.8292C18.4182 14.5812 18.2775 14.2457 18.2745 13.895C18.2714 13.5442 18.4063 13.2064 18.6499 12.9541L24.3925 7.21146H19.5957Z" fill="white"></path>
+                      </svg>
+                    </a>
+                    <a href=https://pump.fun/B7jQUJNPpT76QMux3oHH2ffamC57XXKhfWbH3j3Rpump  class="top-hero__button button button--big button--white"><span>Chart</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="top-hero__image">
+                  <img src="images/main.png" alt="Image">
+                </div>
+              </div>
             </div>
-            <a href="https://x.com/lunzotoken" target="_blank" class="social-icon-wrapper">
-                <img src="images/x.png" class="social-icon">
-            </a>
-
-            </a>
-            <a href="https://t.me/lunzotoken" target="_blank" class="social-icon-wrapper">
-                <img src="images/tlg.png" class="social-icon">
-            </a>
-        </div>
-        <div class="navbar-footer">Copyright © LUNZO</div>
-    </nav>
-    <main>
-        <button id="back-to-top">
-            <img src="images/backToTop.png" class="back-to-top-img">
-        </button>
-        <h1 class="title"><span class="dollar"></span>LUNZO</h1>
-        <div class="sub-title">the cute green alien</div>
-        <img src="gif/landingAnimation.gif" class="landing-animation">
-        <!--PUMPFUN-->
-        <a href="https://pump.fun/coin/8ErGuZa88xRwqpqztkj3ZKiwssH9swpbuidNDVZpump" target="_blank" class="call-to-action">
-            <img src="images/callToAction.png" class="call-to-action-img">
-        </a>
-        <div class="phantom-img-wrapper">
-            <img src="images/selected_pics/phan.png" class="phantom-img">
-        </div>
-
-                            </div>
-                        </div>
+          </div>
+          <div class="hero__bottom bottom-hero">
+            <div class="bottom-hero__container">
+              <div class="bottom-hero__container-mini">
+                <div class="bottom-hero__items">
+                  <a target="_blank" href="https://t.me/NUNITOKEN" class="bottom-hero__item">
+                    <img src="images/01.png" alt="Icon">
+                  </a>
+                  <a target="_blank" href="https://x.com/NuniFuntoken" class="bottom-hero__item">
+                    <img src="images/02.png" alt="Icon">
+                  </a>
+                 
+                  
+                  
+                  <!-- <a
+                    target="_blank"
+                    href="https://www.coingecko.com/en/coins/crox"
+                    class="bottom-hero__item">
+                    <img src="img/hero/social/06.png" alt="Icon" />
+                  </a> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section data-watch="navigator" class="page__what what">
+          <div data-watch-threshold="0.1" data-watch-once="" data-watch="" class="what__container">
+            <div class="what__row">
+              <div class="what__column">
+                <div class="what__video">
+                  <img src="images/about.png" alt="Image">
+                </div>
+              </div>
+              <div class="what__content" data-da=".what__column, 991.98, 1">
+                <i></i>
+                <div class="what__body">
+                  <h2 class="what__title">
+                    <span>About $NUNI </span>
+                    <i></i>
+                  </h2>
+                  <div class="what__text">
+                    <p>
+                       often associated with the famous Nutty Nibbles, takes on a humorous twist with the phrase "$NUNI" This playful reinterpretation paints a whimsical picture of a hardworking squirrel diligently gathering  much like investors collecting profitable stocks. It symbolizes the simplicity of saving and investing, where even small, consistent efforts can lead to substantial rewards over time, just as squirrels prepare for the future by storing food.
+                    </p>
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section data-watch="navigator" class="page__how how">
+          <div data-watch-threshold="0.8" data-watch-once="" data-watch="" class="how__title title-how">
+            <div class="title-how__container-mini">
+              <span>How to Buy ?</span>
+            </div>
+          </div>
+          <div class="how__container">
+            <div class="how__container-mini">
+              <div data-watch-threshold="0.3" data-watch-once="" data-watch="" class="how__items items-how">
+                <div class="items-how__bg">
+                  <img src="images/bg.png" alt="Background">
+                </div>
+                <div class="items-how__item item-how">
+                  <div class="item-how__decor"></div>
+                  <div class="item-how__body">
+                    <div class="item-how__number">
+                      <span>1</span>
                     </div>
+                    <div class="item-how__header">
+                      <h4 class="item-how__title">Create a Wallet</h4>
+                      <div class="item-how__icon">
+                        <img src="images/01_1.png" alt="Icon">
+                      </div>
+                    </div>
+                    <div class="item-how__text">
+                      To purchase a token on Solana using Phantom, first set
+                      up your Phantom wallet. Download the Phantom extension
+                      from the official website and install it in your browser.
+                      Create a new wallet by following the prompts to set a
+                      password and secure your backup seed phrase. Once your
+                      wallet is set up, fund it by transferring Solana (SOL) from
+                      an exchange or another wallet to your Phantom Solana
+                      address.
+                    </div>
+                  </div>
                 </div>
+                <div class="items-how__item item-how">
+                  <div class="item-how__decor"></div>
+                  <div class="item-how__body">
+                    <div class="item-how__number">
+                      <span>2</span>
+                    </div>
+                    <div class="item-how__header">
+                      <h4 class="item-how__title">Connect to Pump.Fun </h4>
+                      <div class="item-how__icon">
+                        <img src="images/02_1.png" alt="Icon">
+                      </div>
+                    </div>
+                    <div class="item-how__text">
+                      Next, connect to Pump.Fun and click on "Connect Wallet", 
+					  selecting Phantom from the options. Approve the connection 
+					  in the Phantom pop-up to link your wallet to the Pump.Fun. This 
+					  will allow you to trade directly from your Phantom wallet.
+                    </div>
+                  </div>
+                </div>
+                <div class="items-how__item item-how">
+                  <div class="item-how__decor"></div>
+                  <div class="item-how__body">
+                    <div class="item-how__number">
+                      <span>3</span>
+                    </div>
+                    <div class="item-how__header">
+                      <h4 class="item-how__title">Swap SOL for Tokens</h4>
+                      <div class="item-how__icon">
+                        <img src="images/03.png" alt="Icon">
+                      </div>
+                    </div>
+                    <div class="item-how__text">
+                      To swap SOL for your desired token, select SOL in the
+                      "from" field and choose $NUNI  ;  in the "to" field. Enter 
+					  the amount of SOL you want to swap, and Pump.Fun will 
+					  show the estimated amount of tokens you'll receive. 
+					  Click "Swap" or "Exchange," then confirm the transaction 
+					  in the Phantom pop-up window. Make sure to review all 
+					  details before finalizing the transaction.
+                    </div>
+                  </div>
+                </div>
+                <div class="items-how__item item-how">
+                  <div class="item-how__decor"></div>
+                  <div class="item-how__body">
+                    <div class="item-how__number">
+                      <span>4</span>
+                    </div>
+                    <div class="item-how__header">
+                      <h4 class="item-how__title">Verify and Manage Tokens</h4>
+                      <div class="item-how__icon">
+                        <img src="images/04_2.png" alt="Icon">
+                      </div>
+                    </div>
+                    <div class="item-how__text">
+                      Finally, verify your transaction status in Phantom under
+                      the "Activity" tab or on Solscan using your Solana
+                      address. Your new tokens should now be visible in your
+                      Phantom wallet, and you can manage, send, or trade them
+                      as needed.
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+        </section>
+        <section data-watch="navigator" class="page__tokenomics tokenomics">
+          <div data-watch-threshold="0.8" data-watch-once="" data-watch="" class="tokenomics__title title-tokenomics">
+            <div class="title-tokenomics__container-mini">
+              <span>Nuninomics!</span>
+            </div>
+          </div>
+          <div class="tokenomics__container">
+            <div class="tokenomics__container-mini">
+              <div data-watch-threshold="0.3" data-watch-once="" data-watch="" class="tokenomics__items">
+                <div class="tokenomics__item item-tokenomics">
+                  <div class="item-tokenomics__body">
+                    <div class="item-tokenomics__decor">
+                      <span></span>
+                    </div>
+                    <div class="item-tokenomics__title">
+                      Token <br>
+                      Information
+                    </div>
+                    <div class="item-tokenomics__items">
+                      <div class="item-tokenomics__item active">
+                        <div class="item-tokenomics__item-name">Token Name</div>
+                        <div class="item-tokenomics__item-value">$NUNI </div>
+                      </div>
+                      <div class="item-tokenomics__item">
+                        <div class="item-tokenomics__item-name">Network</div>
+                        <div class="item-tokenomics__item-value">SOLANA</div>
+                      </div>
+                      <div class="item-tokenomics__item">
+                        <div class="item-tokenomics__item-name">No Tax</div>
+                        <div class="item-tokenomics__item-value">0/0</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tokenomics__item item-tokenomics">
+                  <div class="item-tokenomics__body">
+                    <div class="item-tokenomics__decor">
+                      <span></span>
+                    </div>
+                    <div class="item-tokenomics__title">
+                      Supply <br>
+                      Information
+                    </div>
+                    <div class="item-tokenomics__items">
+                      <div class="item-tokenomics__item">
+                        <div class="item-tokenomics__item-name">CA</div>
+                        <div class="item-tokenomics__item-value">
+                          <span>B7jQUJNPpT76QMux3oHH2ffamC57XXKhfWbH3j3Rpump</span>
+                          
+                        </div>
+                      </div>
+                      <div class="item-tokenomics__item">
+                        <div class="item-tokenomics__item-name">
+                          Initial Supply
+                        </div>
+                        <div class="item-tokenomics__item-value">1B</div>
+                      </div>
+                      <div class="item-tokenomics__item">
+                        <div class="item-tokenomics__item-name">
+                          Circulating Supply
+                        </div>
+                        <div class="item-tokenomics__item-value">1B</div>
+                      </div>
+                      <div class="item-tokenomics__item">
+                        <div class="item-tokenomics__item-name">Liquidity</div>
+                        <div class="item-tokenomics__item-value">0%  BURNED</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page__social social">
+          <div data-watch-threshold="0.8" data-watch-once="" data-watch="" class="social__title title-social">
+            <div class="title-social__container-mini">
+              <span>Join Us</span>
+            </div>
+          </div>
+          <div class="social__container">
+            <div class="social__container-mini">
+              <div class="social__text">
+                JOIN<br> 
+				THE <br>
+                PARTY
+              </div>
+              <a href="https://pump.fun/B7jQUJNPpT76QMux3oHH2ffamC57XXKhfWbH3j3Rpump" class="social__button button button--big"><span>Buy Now</span><svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
+                  <path d="M9.22876 7.21146C8.30577 7.21146 7.55668 7.96056 7.55668 8.88355V24.2667C7.55668 25.1897 8.30577 25.9388 9.22876 25.9388H24.6119C25.5349 25.9388 26.284 25.1897 26.284 24.2667V19.2505C26.284 18.8957 26.4249 18.5554 26.6758 18.3046C26.9267 18.0537 27.2669 17.9128 27.6217 17.9128C27.9764 17.9128 28.3167 18.0537 28.5675 18.3046C28.8184 18.5554 28.9593 18.8957 28.9593 19.2505V24.2667C28.9593 25.4197 28.5013 26.5255 27.686 27.3408C26.8707 28.1561 25.7649 28.6141 24.6119 28.6141H9.22876C8.07576 28.6141 6.96997 28.1561 6.15468 27.3408C5.33938 26.5255 4.88135 25.4197 4.88135 24.2667V8.88355C4.88135 7.73054 5.33938 6.62476 6.15468 5.80946C6.96997 4.99416 8.07576 4.53613 9.22876 4.53613H14.245C14.5998 4.53613 14.94 4.67707 15.1909 4.92793C15.4417 5.17879 15.5827 5.51903 15.5827 5.8738C15.5827 6.22857 15.4417 6.56881 15.1909 6.81967C14.94 7.07053 14.5998 7.21146 14.245 7.21146H9.22876ZM19.5957 7.21146C19.2409 7.21146 18.9007 7.07053 18.6498 6.81967C18.3989 6.56881 18.258 6.22857 18.258 5.8738C18.258 5.51903 18.3989 5.17879 18.6498 4.92793C18.9007 4.67707 19.2409 4.53613 19.5957 4.53613H27.6217C27.9764 4.53613 28.3167 4.67707 28.5675 4.92793C28.8184 5.17879 28.9593 5.51903 28.9593 5.8738V13.8998C28.9593 14.2546 28.8184 14.5948 28.5675 14.8457C28.3167 15.0965 27.9764 15.2375 27.6217 15.2375C27.2669 15.2375 26.9267 15.0965 26.6758 14.8457C26.4249 14.5948 26.284 14.2546 26.284 13.8998V9.10292L20.5414 14.8455C20.2891 15.0892 19.9512 15.224 19.6005 15.221C19.2498 15.2179 18.9143 15.0772 18.6662 14.8292C18.4182 14.5812 18.2775 14.2457 18.2745 13.895C18.2714 13.5442 18.4063 13.2064 18.6499 12.9541L24.3925 7.21146H19.5957Z" fill="white"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__container-mini">
+            <div class="footer__content">
+              <div class="footer__top">
+                <div class="footer__top-top">
+                  <div class="footer__top-top-logo">
+                    
+                  </div>
+                </div>
+                <div class="footer__top-social">
+                  <a target="_blank" href="https://t.me/NUNITOKEN " class="footer__top-social-item">
+                    <img src="images/02_2.png" alt="Logo">
+                  </a>
+                  <a target="_blank" href="https://x.com/NuniFuntoken" class="footer__top-social-item">
+                    <img src="images/01_2.png" alt="Logo">
+                  </a>
+		  
+                
+                 
+                  
+                  </a>
+                  
+               
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="note-container">
-            <p class="note-text"> </p>
-            <p class="note-text"> Introducing LUNZO, a cute and adventurous green alien from a distant galaxy! </p>
-            <h1 class="note-thank-you">he loves boops</h1>
-        </div>
-        <img src="images/r.webp" class="side-quak right-quak">
-        <div class="text-parallax-container">
-            <div class="text-parallax-wrapper">
-                <div class="text-parallax-row scroll-right">
-                    <span>LUNZO / DANCE / ANTENNAS GO POOF / ALIEN / </span>
-                    <span>LUNZO / DANCE / ANTENNAS GO POOF / ALIEN / </span>
-                </div>
-            </div>
-            <div class="text-parallax-wrapper">
-                <div class="text-parallax-row scroll-left">
-                    <span>JUMP / LUNZO / UFO / CUTIE PIE / GIGGLE / </span>
-                    <span>JUMP / LUNZO / UFO / CUTIE PIE / GIGGLE / </span>
-                </div>
-            </div>
-            <div class="text-parallax-wrapper">
-                <div class="text-parallax-row scroll-right">
-                    <span>LUNZO / FLY / GREEN BELLY / BOOPS / </span>
-                    <span>LUNZO / FLY / GREEN BELLY / BOOPS / </span>
-                </div>
-            </div>
-            <div class="text-parallax-wrapper">
-                <div class="text-parallax-row scroll-left">
-                    <span>SKIP / LUNZO / WADDLE / SQUISHY / LOL / </span>
-                    <span>SKIP / LUNZO / WADDLE / SQUISHY / LOL / </span>
-                </div>
-            </div>
-        </div>
-        <img src="images/l.webp" class="side-quak left-quak">
-        <div class="gallery">
-            <div class="gallery-img-wrapper">
-                <img src="images/selected_pics/1.gif" class="gallery-img">
-                <img src="images/borders/border1.png" class="gallery-img-border">
-            </div>
-            <div class="gallery-img-wrapper">
-                <img src="images/selected_pics/2.gif" class="gallery-img">
-                <img src="images/borders/border2.png" class="gallery-img-border">
-            </div>
-            <div class="gallery-img-wrapper">
-                <img src="images/selected_pics/3.gif" class="gallery-img">
-                <img src="images/borders/border3.png" class="gallery-img-border">
-            </div>
-            <div class="gallery-img-wrapper">
-                <img src="images/selected_pics/4.gif" class="gallery-img">
-                <img src="images/borders/border4.png" class="gallery-img-border">
-            </div>
-            <div class="gallery-img-wrapper">
-                <img src="images/selected_pics/5.gif" class="gallery-img">
-                <img src="images/borders/border5.png" class="gallery-img-border">
-            </div>
-            <div class="gallery-img-wrapper">
-                <img src="images/selected_pics/6.gif" class="gallery-img">
-                <img src="images/borders/border6.png" class="gallery-img-border">
-            </div>
-            <div class="gallery-img-wrapper">
-                <img src="images/selected_pics/7.gif" class="gallery-img">
-                <img src="images/borders/border7.png" class="gallery-img-border">
-            </div>
-            <div class="gallery-img-wrapper">
-                <img src="images/selected_pics/9.gif" class="gallery-img">
-                <img src="images/borders/border8.png" class="gallery-img-border">
-            </div>
-            <div class="gallery-img-wrapper">
-                <img src="images/selected_pics/8.gif" class="gallery-img">
-                <img src="images/borders/border7.png" class="gallery-img-border">
-            </div>
-            <div class="gallery-img-wrapper">
-                <img src="images/selected_pics/10.gif" class="gallery-img">
-                <img src="images/borders/border8.png" class="gallery-img-border">
-            </div>
-        </div>
-    </main>
-    <footer>
-        <img src="images/selected_pics/lov.webp" class="quak-love-img">
-        <div class="footer-text">Made with ❤️ for the community</div>
-        <div class="copyright">Copyright © LUNZO </div>
-    </footer>
-    <script src="https://kit.fontawesome.com/40248f80b4.js" crossorigin="anonymous" crossorigin="anonymous" type="34dc7494e50e2cb7a7aa90f0-text/javascript"></script>
-<script src="cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="34dc7494e50e2cb7a7aa90f0-|49" defer=""></script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'921f1ad7aab69711',t:'MTc0MjI0MTkyNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+      </footer>
+    </div>
+    <script src="js/app.min95259525.js"></script>
+  
+
+
+
 
 </body></html>
